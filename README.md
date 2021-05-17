@@ -6,6 +6,7 @@
 ## Code 설명  
 __main.cpp__  
 data set을 받아들여 실행하는 부분.  
+_실행이나 데이터 교체는 main.cpp에서 진행!_
 
 __csvTovector.cpp__  
 ~~~C++
