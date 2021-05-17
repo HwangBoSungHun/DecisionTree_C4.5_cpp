@@ -62,7 +62,7 @@ int accuracyCalc(Node* pRoot, vector<vector<float> > vWine);
 ~~~
 
 ## 결과
-- __Wine 데이터__에 적용<br/><br/>
+- __Wine 데이터__ 에 적용<br/><br/>
 - __종료 조건__: red인 비율이 0.95보다 크거나 white인 비율이 0.95보다 크거나, red 또는 white의 갯수가 20개보다 적을 때<br/><br/>
 <img src = "result.jpg" width="110%"></center><br/><br/>
 - node가 나눠지는 횟수는 5번. 처음 나눠질 때 information gain이 가장 큰 것은 5번째 attribute의 0.059라는 값이다. 따라서 이 값을 기준으로 나눠지는데 나눠진 후 왼쪽 node는 white wine의 비율이 0.93이고 오른쪽 node는 red wine의 비율이 0.9일 정도로 굉장히 잘 나눠진다는 것을 확인할 수 있다. 5번째 attribute는 chlorides으로 염화물이라는 것이다. 따라서 염화물의 비율만으로도 어느 정도 red인지 white인지 예측할 수 있다.<br/><br/>
