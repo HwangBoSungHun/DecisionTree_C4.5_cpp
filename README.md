@@ -6,13 +6,13 @@ __main.cpp__
 data set을 받아들여 실행하는 부분.  
 
 __csvTovector.cpp__  
-~~~
+~~~C++
 vector<vector<float> > ConvertToVector(char file1[], char file2[])  
 ~~~
 csv파일을 읽고 vector<vector<float>>의 형태로 return 한다.  
 
 __C45.cpp__  
-~~~
+~~~C++
 typedef struct Node  
 {  
     vector<vector<float>> vWine;  
@@ -32,7 +32,7 @@ Node* c45(vector<vector<float>> vWine) //실제 c4.5 구현.
 void initNode(Node* pNode) //node 초기화
 ~~~
 __IGCalculator.cpp__
-~~~
+~~~C++
 typedef struct IG_Info
 {
     float fAttr_value;
@@ -53,7 +53,7 @@ IG_Info MaxIG_Info(float fRorW[], float fAttr[], int nSize)
 
 
 __traversal.cpp__
-~~~
+~~~C++
 //preorder traversal 이용해서 tree 확인.
 void preorder_traversal(Node* pRoot);
 
