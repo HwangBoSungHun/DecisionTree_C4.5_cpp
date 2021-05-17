@@ -62,11 +62,11 @@ int accuracyCalc(Node* pRoot, vector<vector<float> > vWine);
 ~~~
 
 ## 결과
-- Wine 데이터에 적용<br/><br/>
+- __Wine 데이터__에 적용<br/><br/>
 - __종료 조건__: red인 비율이 0.95보다 크거나 white인 비율이 0.95보다 크거나, red 또는 white의 갯수가 20개보다 적을 때<br/><br/>
 <img src = "result.jpg" width="110%"></center><br/><br/>
 - node가 나눠지는 횟수는 5번. 처음 나눠질 때 information gain이 가장 큰 것은 5번째 attribute의 0.059라는 값이다. 따라서 이 값을 기준으로 나눠지는데 나눠진 후 왼쪽 node는 white wine의 비율이 0.93이고 오른쪽 node는 red wine의 비율이 0.9일 정도로 굉장히 잘 나눠진다는 것을 확인할 수 있다. 5번째 attribute는 chlorides으로 염화물이라는 것이다. 따라서 염화물의 비율만으로도 어느 정도 red인지 white인지 예측할 수 있다.<br/><br/>
 - 5번 나눠지는 과정 중 3번이 7번째 attribute에 의해서 나눠진다는 것을 알 수 있다. 7번째 attribute는 total sulfur dioxide으로 총 이산화황이라는 것이다. 이 attribute 역시 red와 white를 잘 나누는 속성이라는 것을 알 수 있다.<br/><br/>
 - Node라는 struct에는 nOutcome이라는 변수가 있다. 각각 node의 nOutcome마다 red와 white 중 갯수가 더 많은 것의 정보를 저장한다(red가 많으면 1, white가 많으면 2를 저장). nOutcome과 fAttribute_value를 이용해서 test set을 예측한다(fAttribute_value보다 크고 작은 지에 따라서 자식 node로 이동하고 그 자식 node에서 nOutcome을 이용해서 red인지 white인지 예측함).<br/><br/>
-- accuracyCalc()라는 함수를 이용해서 test set을 확인해 본 결과, 총 798개의 data set 중 778개의 data가 예측한 값과 같았으며 97.5%의 정확성을 확인할 수 있었다.<br/><br/>
+- accuracyCalc()라는 함수를 이용해서 test set을 확인해 본 결과, 총 798개의 data set 중 778개의 data가 예측한 값과 같았으며 __97.5%의 정확도__ 달성<br/><br/>
 
