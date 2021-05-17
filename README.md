@@ -23,7 +23,7 @@ typedef struct Node
     float fProbablityOfRed; //red일 확률 저장.
     float fProbablityOfWhite; //white일 확률 저장.
     
-    int nOutcome; //red 갯수가 많으면 1, white 갯수가 많으면 2 저장. 이것을 			통해 test이 들어왔을 때 red인지 white인지 결정.
+    int nOutcome; //red 갯수가 많으면 1, white 갯수가 많으면 2 저장. 이것을 통해 test이 들어왔을 때 red인지 white인지 결정.
     
     struct Node *pLeft;
     struct Node *pRight;
@@ -32,6 +32,7 @@ Node* c45(vector<vector<float>> vWine) //실제 c4.5 구현.
 void initNode(Node* pNode) //node 초기화
 ~~~
 __IGCalculator.cpp__
+~~~
 typedef struct IG_Info
 {
     float fAttr_value;
@@ -48,13 +49,14 @@ double IG(double dEnt1, double dEnt2)
 
 //(Sorting 하지 않음) 한 attribute에 대한 column이 들어왔을 때, 그 column을 기준으로 모든 value의 IG을 구해서 IG이 가장 큰 것의 정보를 저장.
 IG_Info MaxIG_Info(float fRorW[], float fAttr[], int nSize)
-
+~~~
 
 
 __traversal.cpp__
+~~~
 //preorder traversal 이용해서 tree 확인.
 void preorder_traversal(Node* pRoot);
 
 //data set으로 들어간 wine을 분석하여 red 와인인지 white 와인인지 예측하고, 실제 값(실제로 red 와인인지 white인지)과 비교하여 accuracy를 return 함.
 int accuracyCalc(Node* pRoot, vector<vector<float> > vWine);
-
+~~~
